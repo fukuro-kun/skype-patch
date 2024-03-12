@@ -62,11 +62,11 @@
   }
 }
 
-button[title="React to this message"] {
+button[title="Reagiere auf diese Nachricht"] {
   opacity: .05;
 }
 
-button[title="React to this message"]:hover {
+button[title="Reagiere auf diese Nachricht"]:hover {
   opacity: 1;
 }
 
@@ -74,9 +74,10 @@ body:before {
   content: "";
   position: fixed;
   top: 0;
-  left: 50%;
+  left: 0;
   right: 0;
-  height: 20px;
+  height: 30px;
   z-index: 3;
+  pointer-events: none;
   -webkit-app-region: drag;
 }

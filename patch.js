@@ -8,26 +8,26 @@ const updatesFile = './updates.json';
  */
 
 if (process.argv.length < 3) {
-    console.log('You need to specify the installation location of Skype. It needs to be the folder where app.asar is located.');
-    console.log('E.g.:   node patch.js /Applications/Skype.app/Contents/Resources');
+    console.log('Sie müssen den Installationsort von Skype angeben. Es muss der Ordner sein, in dem sich app.asar befindet.');
+    console.log('z.B.:   node patch.js /usr/share/skypeforlinux/resources');
     process.exit(0);
 }
 
 const skypeDir = process.argv[2];
 
 if (! fs.existsSync(skypeDir)) {
-    console.log('This directory doesn\'t exist.');
+    console.log('Das Verzeichnis existiert nicht.');
     process.exit(0);
 }
 
 if (! fs.existsSync(path('app.asar'))) {
-    console.log('This directory doesn\'t contain "app.asar".');
+    console.log('Das Verzeichnis enthält die Datei "app.asar" nicht.');
     process.exit(0);
 }
 
 // Create a backup of the app.asar file if one doesn't already exist.
 if (! fs.existsSync(path('app.asar.bak'))) {
-    console.log('Creating a backup of app.asar because none exists.');
+    console.log('Erstelle ein Backup der app.asar, weil noch keines da ist.');
     fs.createReadStream(path('app.asar')).pipe(fs.createWriteStream(path('app.asar.bak')));
 }
 
@@ -57,9 +57,9 @@ exec(`npx asar extract ${path('app.asar')} ${path('app')}`, () => {
                     if (regex.test(contents)) {
                         contents = contents.replace(regex, substitute);
                         
-                        console.log(`\x1b[33m${regex}\x1b[0m -- \x1b[32mSuccess\x1b[0m`);
+                        console.log(`\x1b[33m${regex}\x1b[0m -- \x1b[32mErfolg\x1b[0m`);
                     } else {
-                        console.log(`\x1b[33m${regex}\x1b[0m -- \x1b[31mFailed\x1b[0m`);
+                        console.log(`\x1b[33m${regex}\x1b[0m -- \x1b[31mFehlgeschlagen\x1b[0m`);
                     }
                 }
             }
@@ -73,7 +73,7 @@ exec(`npx asar extract ${path('app.asar')} ${path('app')}`, () => {
             fs.writeFileSync(filePath, contents);
         }
 
-        console.log('Removing the .asar archive because there\'s no need for it.');
+        console.log('Entferne das .asar Archiv, weil es nicht mehr gebraucht wird.');
         fs.unlinkSync(path('app.asar'));
     });
 });

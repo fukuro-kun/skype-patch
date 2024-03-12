@@ -1,7 +1,7 @@
 # Skype Patch
 
-This project has been created as part of a proof of concept of how to alter an Electron app.
+Dieses Projekt wurde als Teil eines Machbarkeitsnachweises für die Änderung einer Electron-App erstellt.
 
-The article that covers this can be found here: [codepicky.com/hacking-electron-restyle-skype](https://www.codepicky.com/hacking-electron-restyle-skype/)
+Den original Artikel dazu finden Sie hier: [codepicky.com/hacking-electron-restyle-skype](https://www.codepicky.com/hacking-electron-restyle-skype/)
 
-Visit [CodePicky](https://www.codepicky.com/) for more tutorials on web design and development.
+Ich habe den Code an meine Bedürfnisse angepasst.
