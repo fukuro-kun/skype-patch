@@ -40,7 +40,7 @@ exec(`npx asar extract ${path('app.asar')} ${path('app')}`, () => {
             let update = updates[file];
             let contents = fs.readFileSync(filePath, 'utf8');
 
-            console.log(`Processing ${file}...`);
+            console.log(`Bearbeite die Datei ${file}...`);
 
             if (update.replace) {
                 for (let regex in update.replace) {

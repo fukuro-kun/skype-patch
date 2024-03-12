@@ -1,4 +1,4 @@
-@media (max-width: 760px) {
+ /*@media (max-width: 760px) {
   body {
     padding-left: 54px;
   }
@@ -15,7 +15,7 @@
     z-index: 2;
   }
 
-  /**/
+ 
 
   [style *= "width: 322px;"][style *= "position: relative;"]:not(:hover) > [style *= "padding: 10px 8px 8px; margin-top: -6px;"],
   [style *= "width: 322px;"][style *= "position: relative;"]:not(:hover) [style *= "border-width: 0px 0px 1px; border-color: rgb(43, 44, 51); border-style: solid;"],
@@ -39,7 +39,7 @@
     height: 50px !important;
   }
 
-  /**/
+
 
   [style *= "width: 322px;"][style *= "position: relative;"]:hover {
     width: 322px !important;
@@ -68,7 +68,8 @@ button[title="Reagiere auf diese Nachricht"] {
 
 button[title="Reagiere auf diese Nachricht"]:hover {
   opacity: 1;
-}
+} 
+*/
 
 body:before {
   content: "";

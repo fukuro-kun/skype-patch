@@ -3,9 +3,9 @@
         "replace": {
             "/minDesktop:450,tiny:760,small:896,medium:1280/": "minDesktop:1200,tiny:1000,small:450,medium:1200",
             "/,headerSizeSmall:24/g": ",headerSizeSmall:18"
-        },
+        }
     },
-    "MainWindow.js": {
+    "main.js": {
         "replace": {
             "/minHeight:t.minimumWindowSize.height,/": "minHeight:t.minimumWindowSize.height,'frame': false,"
         }

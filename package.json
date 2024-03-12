@@ -1,6 +1,6 @@
 {
   "name": "skype-patch",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Stylt die Skype App um, damit die Seitenleiste nicht mehr so stört.",
   "main": "patch.js",
   "scripts": {},
